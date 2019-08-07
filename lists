@@ -1,0 +1,55 @@
+<select id="cars">
+<option value="benz">Benz</option>
+<option value="audi">Audi</option>
+<option value="bmw">bmw</option>
+</select>
+<button id="b1">
+click me
+</button>
+<ol id="here">
+
+</ol>
+
+
+#cars{
+  width: 100px;
+}
+
+
+
+function myfunc()
+{
+ let value=document.getElementById("cars").value;
+ console.log(value);
+ if(value=="benz")
+ {
+ let obj=benz.display()
+ console.log(obj);
+ for(let i in obj){
+ let node=document.createElement('LI')		
+ let text=document.createTextNode(i+"="+obj[i])
+ node.appendChild(text)
+ document.getElementById("here").appendChild(node)
+ }
+ }
+}
+let cars=function(id,name,color){
+this.id=id;
+this.name=name;
+this.color=color;
+this.image=""
+this.display=function(){
+return {id:this.id,name:this.id,color:this.color}
+}
+}
+let benz=new cars(100,"Benz","Red")
+let audi=new cars(101,"Audi","Blue")
+let bmw=new cars(102,"BMW","Green")
+
+
+
+
+/
+
+document.getElementById("b1").addEventListener("click",myfunc)
+

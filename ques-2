@@ -1,0 +1,8 @@
+const circle={
+pi:3.14,
+area:function(r){
+return this.pi*r*r;
+}
+};
+
+console.log(circle.area(10));

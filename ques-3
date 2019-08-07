@@ -1,0 +1,28 @@
+class Animal{
+constructor()
+{
+ this.eyes=2;
+ this.ears=2;
+ this.legs=4;
+ this.tail=1;
+}
+move(){
+console.log("Animal is moving")
+}
+}
+
+class Tiger extends Animal{
+roar(){
+console.log('tiger roars')
+}
+}
+class Elephant extends Animal{
+trumpet(){
+console.log("Elephant trumpets")
+}
+}
+
+const t=new Tiger();
+
+console.log(t.move())
+

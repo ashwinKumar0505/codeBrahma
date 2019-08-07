@@ -1,0 +1,30 @@
+var car=(function(color,id,name){
+this.color=color;
+this.id=id;
+this.name=name;
+});
+var c=new car("red",123,"jaguar")
+var c1=new car("blue",124,"Benz")
+
+car.prototype.start=()=>{
+function startHelp(){
+console.log("this includes the starting help methods")
+}
+startHelp();
+}
+car.prototype.stop=()=>{
+function stopHelp(){
+console.log("this includes the stopping help methods")
+}
+stopHelp();
+
+}
+car.prototype.acc=()=>{
+function accHelp(){
+console.log("this includes the accelerating help methods")
+}
+accHelp()
+
+}
+var c2=new car("green",125,"audi")
+console.log(c1.acc());
