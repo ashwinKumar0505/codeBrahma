@@ -1,0 +1,18 @@
+function flattenDeep(array,arr)
+{
+ let arr1=array
+ for(let i=0;i<arr1.length;i++)
+ {
+   if(Array.isArray(arr1[i])){
+     arr2=flattenDeep(arr1[i],arr)
+   }
+   else{
+     arr.push(arr1[i])
+   }
+ }
+ return arr;
+}
+
+let arr=flattenDeep([1,[10,3],[4,5],6],[])
+
+console.log(arr)

@@ -1,0 +1,17 @@
+function chunk(array,size)
+{
+ i=0
+ size1=size
+ let arr=[]
+ console.log(array.length)
+ while(i<array.length)
+ {
+  arr.push(array.slice(i,size1))
+  i=i+size
+  size1=size1+size
+ }
+ return arr
+}
+
+let arr=chunk([1,2,3,4,5],2)
+console.log(arr)
