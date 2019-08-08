@@ -1,0 +1,16 @@
+function isArray(array){
+
+if(array instanceof Array){
+  return true
+}
+else{
+  return false
+}
+
+}
+
+console.log(isArray([12,1]));
+
+console.log(isArray(10));
+
+console.log(isArray("ashwin"))

@@ -1,0 +1,12 @@
+function reverseString(string){
+ let str="";
+ let len=string.length-1
+ for(j=len;j>=0;j--){
+   str+=string[j];
+ }
+ return str;
+}
+
+let str=reverseString("hhhhaaa")
+
+console.log(str)
